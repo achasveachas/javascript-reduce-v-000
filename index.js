@@ -23,7 +23,7 @@ function reduce(collection, callback, initialValue) {
 }
 
 function callback(totalPrice, product) {
-  if (product.price > 7) {
+  if (product.price < 7) {
     return totalPrice + product.price;
   } else {
     return totalPrice;
