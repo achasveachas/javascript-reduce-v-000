@@ -45,7 +45,7 @@ function getTotalAmountForProducts(products) {
   let totalPrice = 0;
 
   products.forEach(product => {
-    if (product.discount > .5) {
+    if (product.discount >= .5) {
       totalPrice += product.price;
     }
   });
@@ -79,7 +79,7 @@ function getTotalAmountForProducts(products, callback) {
 }
 
 function callback(totalPrice, product) {
-  if (product.discount > .5) {
+  if (product.discount >= .5) {
     return totalPrice + product.price;
   }
   return totalPrice;
@@ -97,13 +97,13 @@ control of the logic, it should be straight-forward to change:
 
 ```js
 function callback(totalPrice, product) {
-  if (product.price > 7) {
+  if (product.price < 7) {
     return totalPrice + product.price;
   }
   return totalPrice;
 }
 
-console.log(getTotalAmountForProducts(products, callback)); // prints 22
+console.log(getTotalAmountForProducts(products, callback)); // prints 11.5
 ```
 
 Nice! This illustrates how powerful our abstraction is becoming.
@@ -124,13 +124,13 @@ function getTotalAmountForProducts(products, callback, initialValue) {
 }
 
 function callback(totalPrice, product) {
-  if (product.price > 7) {
+  if (product.price < 7) {
     return totalPrice + product.price;
   }
   return totalPrice;
 }
 
-console.log(getTotalAmountForProducts(products, callback, 0)); // still prints 22. Yeah!
+console.log(getTotalAmountForProducts(products, callback, 0)); // still prints 11.5. Yeah!
 ```
 
 To further illustrate how powerful our abstraction is becoming, we'll make our function more generic. Going back to the
