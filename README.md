@@ -1,16 +1,19 @@
-JavaScript Reduce
----
+# JavaScript Reduce
+
+## Overview
+
+In this lesson, we'll look at how to reduce a list to a single value. 
 
 ## Objectives
 
 1. Explain the concept of reduce() in programming
-2. Practice writing a function that accepts a function as one of its arguments
-3. Practice building small pieces of code that can be used later
+2. Write a function that accepts a function as one of its arguments
+3. Build small pieces of code that can be used later
 
 ## Introduction
 In the world of programming, we often work with lists. Sometimes we want to transform elements in that list to another
 value — but other times, we want to **aggregate** a result. In other words, we want to _reduce_ a list to a single value —
-it could be a string, a number, a boolean, ...
+it could be, for example, a string, a number, a boolean.
 
 ![Amazing parking job](http://www.carcrushing.com/wp-content/uploads/2014/11/Bad-Parking-Jobs-Car-Crushing-004.jpg)
 
@@ -210,4 +213,4 @@ Same result, but without using our custom `reduce()` function. Feel free to thro
 
 ## Resources
 
-- [MDN: Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+* [MDN: Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
